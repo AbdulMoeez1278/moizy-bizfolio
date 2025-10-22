@@ -688,8 +688,8 @@ body {
   background: var(--bg-light);
   color: var(--text-light);
   transition: background 0.4s ease, color 0.4s ease;
-  margin-top: 6px;
-  padding: 4rem 2rem;
+  margin-top: 20px;
+  padding: 1rem 2rem;
   box-sizing: border-box;
 }
 
@@ -988,6 +988,7 @@ body {
   .hero-content {
     order: 2;
     text-align: center;
+    margin-top: 35px;
     max-width: 100%;
   }
 
