@@ -67,7 +67,7 @@
         <div class="container nav-container">
             <!-- Brand / Logo -->
             <a href="#" class="brand-link" aria-label="Your Name — Business Developer">
-                <span class="brand-text">M. Naveed</span>
+                <img src="./assets/naveedLogoImg.png" alt="Footer Logo">
             </a>
 
             <!-- Navigation -->
@@ -379,8 +379,8 @@
 
                 <div class="cards portfolio-grid">
                     <article class="card project-card" tabindex="0"
-                        data-project='{"title":"SaaS Pipeline Build","img":"assets/case1.jpg","summary":"Built a scalable outbound motion; targeted ICP and automated sequences.","results":"+320k leads, 38% conversion lift"}'>
-                        <img src="assets/case1.jpg" alt="Case study screenshot - SaaS Pipeline" loading="lazy" />
+                        data-project='{"title":"SaaS Pipeline Build","img":"assets/caseStudyOne.jpg","summary":"Built a scalable outbound motion; targeted ICP and automated sequences.","results":"+320k leads, 38% conversion lift"}'>
+                        <img src="assets/caseStudyOne.jpg" alt="Case study screenshot - SaaS Pipeline" loading="lazy" />
                         <div class="card-body">
                             <h3>SaaS Pipeline Build</h3>
                             <p>Scaled outbound and inbound funnels for a fast-growing SaaS.</p>
@@ -389,8 +389,8 @@
                     </article>
 
                     <article class="card project-card" tabindex="0"
-                        data-project='{"title":"B2B Lead Flow","img":"assets/case2.jpg","summary":"Rebuilt landing experience and optimized ad-to-lead flow.","results":"+450k leads, CPL -27%"}'>
-                        <img src="assets/case2.jpg" alt="Case study screenshot - B2B Lead Flow" loading="lazy" />
+                        data-project='{"title":"B2B Lead Flow","img":"assets/caseStudyTwo.png","summary":"Rebuilt landing experience and optimized ad-to-lead flow.","results":"+450k leads, CPL -27%"}'>
+                        <img src="assets/caseStudyTwo.png" alt="Case study screenshot - B2B Lead Flow" loading="lazy" />
                         <div class="card-body">
                             <h3>B2B Lead Flow</h3>
                             <p>Optimized funnels and increased lead quality for enterprise sales.</p>
@@ -399,8 +399,9 @@
                     </article>
 
                     <article class="card project-card" tabindex="0"
-                        data-project='{"title":"Conversion Overhaul","img":"assets/case3.jpg","summary":"Full funnel optimization and qualification tech stack implementation.","results":"Conversion +45%, sales cycle -22%"}'>
-                        <img src="assets/case3.jpg" alt="Case study screenshot - Conversion Overhaul" loading="lazy" />
+                        data-project='{"title":"Conversion Overhaul","img":"assets/caseStudyThree.png","summary":"Full funnel optimization and qualification tech stack implementation.","results":"Conversion +45%, sales cycle -22%"}'>
+                        <img src="assets/caseStudyThree.png" alt="Case study screenshot - Conversion Overhaul"
+                            loading="lazy" />
                         <div class="card-body">
                             <h3>Conversion Overhaul</h3>
                             <p>Redesigned funnel and implemented scoring/qualification.</p>
@@ -565,20 +566,44 @@
     <!-- FOOTER -->
     <footer class="site-footer">
         <div class="container footer-grid">
-            <div>
-                <p>&copy; <span id="year"></span> Muhammad Naveed — Business Developer</p>
+            <!-- Brand / About -->
+            <div class="footer-brand">
+                <img src="./assets/naveedLogoImg.png" alt="Footer Logo">
+                <p>Business Developer helping brands grow through strategic sales & lead generation.</p>
             </div>
+
+            <!-- Navigation Links -->
             <div class="footer-links">
-                <a href="#about">About</a>
-                <a href="#services">Services</a>
-                <a href="#contact">Contact</a>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
-            <!-- Scroll to Top Button -->
-            <button id="scroll-top" aria-label="Scroll to top" title="Scroll to top">
-                &#8679;
-            </button>
+
+            <!-- Social Media -->
+            <div class="footer-social">
+                <h4>Connect</h4>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/naveed_6044" aria-label="Instagram"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://facebook.com/" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://linkedin.com/in/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="mailto:hello@yourname.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
         </div>
+
+        <div class="footer-bottom">
+            <p>&copy; <span id="year"></span> Muhammad Naveed — All Rights Reserved</p>
+        </div>
+
+        <!-- Scroll to Top Button -->
+        <button id="scroll-top" aria-label="Scroll to top" title="Scroll to top">&#8679;</button>
     </footer>
+
 
 
     <!-- PROJECT MODAL (accessible) -->
@@ -590,6 +615,39 @@
         </div>
     </div>
 
+    <!-- Header 2 logic -->
+    <script>
+        const header = document.querySelector('.site-header');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    </script>
+
+    <!-- // logo change -->
+    <script>
+        // Toggle theme manually
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+
+        // Automatically update when system theme changes
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+            const newTheme = e.matches ? 'dark' : 'light';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        });
+    </script>
+
+
+    <!-- Scroll to top -->
     <script>
         const scrollTopBtn = document.getElementById('scroll-top');
 
@@ -611,27 +669,41 @@
         });
     </script>
 
-
+    <!-- Hamburger logic -->
     <script>
         const navToggle = document.querySelector('.nav-toggle');
         const sidebar = document.querySelector('#sidebar');
+        const navLinks = document.querySelectorAll('.nav-list a');
 
-        navToggle.addEventListener('click', () => {
+        // Toggle sidebar open/close
+        navToggle.addEventListener('click', (e) => {
+            e.stopPropagation(); // prevent click from bubbling up
             navToggle.classList.toggle('active');
             sidebar.classList.toggle('active');
         });
 
-        // Close menu when any link is clicked
-        document.querySelectorAll('.nav-list a').forEach(link => {
+        // Close sidebar when a link is clicked
+        navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 navToggle.classList.remove('active');
-                sidebar.classList.toggle('active');
+                sidebar.classList.remove('active');
             });
+        });
+
+        // Close sidebar when clicking outside it
+        document.addEventListener('click', (e) => {
+            if (
+                sidebar.classList.contains('active') &&
+                !sidebar.contains(e.target) &&
+                !navToggle.contains(e.target)
+            ) {
+                sidebar.classList.remove('active');
+                navToggle.classList.remove('active');
+            }
         });
     </script>
 
-
-
+    <!-- Slider logic -->
     <script>
         const slides = document.querySelectorAll('.hero-slide');
         const dotsContainer = document.querySelector('.slider-dots');

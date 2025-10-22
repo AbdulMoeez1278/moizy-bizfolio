@@ -63,36 +63,36 @@ const $$ = (sel, ctx = document) => Array.from(ctx.querySelectorAll(sel));
 /* ===============
    NAV TOGGLE (mobile)
    =============== */
-// (function navToggle() {
-//   const toggle = document.querySelector(".nav-toggle");
-//   const nav = $("#primary-nav");
-//   if (!toggle || !nav) return;
+(function navToggle() {
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = $("#primary-nav");
+  if (!toggle || !nav) return;
 
-//   toggle.addEventListener("click", () => {
-//     const expanded = toggle.getAttribute("aria-expanded") === "true";
-//     toggle.setAttribute("aria-expanded", String(!expanded));
-//     if (!expanded) {
-//       nav.classList.add("open");
-//       nav.style.display = "block";
-//       nav.setAttribute("aria-hidden", "false");
-//     } else {
-//       nav.classList.remove("open");
-//       nav.style.display = "";
-//       nav.setAttribute("aria-hidden", "true");
-//     }
-//   });
+  toggle.addEventListener("click", () => {
+    const expanded = toggle.getAttribute("aria-expanded") === "true";
+    toggle.setAttribute("aria-expanded", String(!expanded));
+    if (!expanded) {
+      nav.classList.add("open");
+      nav.style.display = "block";
+      nav.setAttribute("aria-hidden", "false");
+    } else {
+      nav.classList.remove("open");
+      nav.style.display = "";
+      nav.setAttribute("aria-hidden", "true");
+    }
+  });
 
-//   // close nav when clicking link
-//   $$(".nav-list a").forEach((a) =>
-//     a.addEventListener("click", () => {
-//       if (nav.classList.contains("open")) {
-//         nav.classList.remove("open");
-//         toggle.setAttribute("aria-expanded", "false");
-//         nav.style.display = "";
-//       }
-//     })
-//   );
-// })();
+  // close nav when clicking link
+  $$(".nav-list a").forEach((a) =>
+    a.addEventListener("click", () => {
+      if (nav.classList.contains("open")) {
+        nav.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+        nav.style.display = "";
+      }
+    })
+  );
+})();
 
 /* ===============
    TYPED / HERO ROLES (simple, non-library)
