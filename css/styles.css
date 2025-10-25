@@ -251,6 +251,7 @@ body {
 }
 
 .brand-link img {
+  margin-top: 5px;
   width: 140px;
   height: 40px;
   object-fit: cover;
@@ -2558,7 +2559,11 @@ button.btn-link:hover,
 }
 
 /* Social Icons */
-.social-icons a {
+.[data-theme="dark"] .footer-social-icons a {
+  color: #e2e8f0 !important; /* Light icons on dark bg */
+}
+
+.footer-social-icons a {
   display: inline-block;
   margin-right: 1rem;
   color: var(--footer-text, #e2e8f0);
@@ -2566,8 +2571,8 @@ button.btn-link:hover,
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.social-icons a:hover {
-  color: var(--accent, #38bdf8);
+.footer-social-icons a:hover {
+  color: var(--accent, #2a36df);
   transform: translateY(-3px);
 }
 
