@@ -29,73 +29,77 @@ This project demonstrates clean design, responsive layout, and a ready-to-go web
 1. **Clone the repository**  
    ```bash
    git clone https://github.com/AbdulMoeez1278/naveed-bizfolio.git
-Navigate into the project folder
+   
+2. **Navigate into the project folder**
+   ```bash
+   cd naveed-bizfolio
 
-cd naveed-bizfolio
-
-Open index.html in your browser
+3. Open index.html in your browser
 
 Or run via Live Server in VS Code for live reload and development.
 
-Customize and deploy
+4. Customize and deploy
 
 Replace placeholder content, update styles, and publish via Netlify, GitHub Pages, or your preferred host.
+
+---
 
 📂 Project Structure
 
 naveed-bizfolio/
 
-├── index.html         # Home page
+    ├── index.html         # Home page
 
-├── about.html         # About section
+    ├── about.html         # About section
 
-├── services.html      # Services offered
+    ├── services.html      # Services offered
 
-├── portfolio.html     # Portfolio of work/case studies
+    ├── portfolio.html     # Portfolio of work/case studies
 
-├── contact.html       # Contact & form page
+    ├── contact.html       # Contact & form page
 
-└── assets/
+    └── assets/
 
     ├── css/
     
     ├── js/
     
     └── images/
+
+---
     
 📈 Why Use This Template?
 
-Launch your professional web presence in minutes
+- Launch your professional web presence in minutes
 
-Perfect for branding freelancers or consultants
+- Perfect for branding freelancers or consultants
 
-SEO-friendly structure: semantic headings, clean markup, fast performance
+- SEO-friendly structure: semantic headings, clean markup, fast performance
 
-Optimized for both clients and search engines – giving you an edge in competition
+- Optimized for both clients and search engines – giving you an edge in competition
+
+---
 
 🔧 Future Enhancements
 
-Add dynamic contact form integration (e.g., with EmailJS or backend service)
+- Add dynamic contact form integration (e.g., with EmailJS or backend service)
+- Introduce dark mode support and custom themes
+- Expand with blog layout or CMS integration (WordPress / Headless)
+- Add animations or interactive elements for enhanced UX
 
-Introduce dark mode support and custom themes
-
-Expand with blog layout or CMS integration (WordPress / Headless)
-
-Add animations or interactive elements for enhanced UX
+---
 
 🤝 Collaboration & Contributions
 
 Contributions are welcome! If you’d like to submit improvements or new ideas:
 
-Fork the repository
+- Fork the repository
+- Create a branch (git checkout -b feature/your-idea)
+- Commit your changes (git commit ‐m "Add new feature")
+- Push to the branch (git push origin feature/your-idea)
+- Open a Pull Request describing your improvement
 
-Create a branch (git checkout -b feature/your-idea)
-
-Commit your changes (git commit ‐m "Add new feature")
-
-Push to the branch (git push origin feature/your-idea)
-
-Open a Pull Request describing your improvement
+---
 
 📬 Let’s Connect
 
@@ -104,6 +108,8 @@ GitHub: @AbdulMoeez1278
 LinkedIn: linkedin.com/in/abdulmoeez1278
 
 Email: abdulmoeez1278@gmail.com
+
+---
 
 Thank you for exploring Naveed-Bizfolio. Whether you're launching your brand or helping someone else build theirs—let’s make it memorable. ✨
 
